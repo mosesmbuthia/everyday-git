@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everday Git</title>
+</head>
+<body>
+    <h1>Everday Git</h1>
+    <h2>What is Git</h2>
+    <p>In the world of software and web development, in is very important to maintain order and also track changes on your project. That’s where Git comes in. Git is a distributed version control system (VCS) that allows you to track changes in your files and collaborate effectively with other developers to manage the source code efficiently. What exactly is version control, and why is git so important? A version control system is a tool that helps developers to track changes made to files over time. It also enables multiple developers to collaborate on a project without overwriting each other’s work. There are a few version control systems such as, Mercurial, Git, Apache Subversion, and Bitbucket. On this blog, we will solely focus on Git and GitHub.</p>
+    <h2>Git Installation.</h2>
+    <p>Before we dive into the world of Git, it is essential to ensure that you have Git installed on your computer. </p>
+    <p>To check if you have Git installed, open Command Prompt on Windows, Terminal on macOS and Linux and type the following command. git--version. You should see an output displaying the version of Git installed on your machine which means git is installed on your computer. </p>
+    <p>If Git installed on your machine, here is a step-by-step procedure on how to install Git on Windows. </p>
+    <div>
+        <ol>
+            <li>	Download the Git installer from the official <a href="https://git-scm.com/downloads/win">Microsft</a> website. </li>
+            <li>	Run the installer and follow the instructions. (make sure to keep the default settings)</li>
+            
+            <li>	Once the installation is complete, pen command prompt and type this command git--version to verify the installation.</li>
+            <div>
+                <figure>
+                    <img src="./git-version.jpg" alt="cmd git version command">
+                    <figcaption>version number output means git is installed, any other output means git not installed</figcaption>
+                </figure>
+            </div>
+        </ol>
+    </div>
+    <h2>Git Configuration</h2>
+    <p>Once you have confirmed that Git is installed on your computer, the next step is to configure your username and your email address. This is very important since every git commit will use this information to track the changes made to the repository. </p>
+    <div>
+        Here is how you configure this information.
+        <p>
+            Step 1: Open Command Prompt to enter the configuration commands.
+        </p>
+        <p>
+            To set your git username, type the following command and press enter. git config --global user.name “Your Name”
+<div>
+    <figure>
+        <img src="./username-config.jpg" alt="username">
+        <figcaption>username configuration command</figcaption>
+    </figure>
+</div>
+        </p>
+        <p>
+            To set your Git email, type the following command and press enter. git config --global user.email “youremail@example.com”
+<div>
+    <figure>
+        <img src="./useremail-config.jpg" alt="email">
+        <figcaption>user email configuration command</figcaption>
+    </figure>
+</div>
+        </p>
+        <p>
+            Step 2: Verify your configuration by typing the following command. git config --global --list 
+<div>
+    <figure>
+        <img src="./user-confirm.jpg" alt="list">
+        <figcaption>confirm correct user name and email command</figcaption>
+    </figure>
+</div>
+        </p>
+        <p>
+            This command will display your configuration settings including your username and email address.
+        </p>
+    </div>
+<h2>Understanding and Initializing a Git Repository</h2>
+<h3>Git Repository</h3>
+<p>
+    This is a storage space where all your project files, along with their revision history are stored. This incudes additions, deletions, and modifications to your files. This allows the developer to revert to previous versions, track progress, and collaborate with other developers.  
+</p>
+<p>
+    Repositories can be local (stored on your machine) or remote (hosted on platforms like GitHub). You can push changes from the local repository to the remote repository and pull updates from the remote repository to your local machine.   
+</p>
+<p>
+    Here is how to Initialize a Git Repository.
+</p>
+<p>
+    Open Command Prompt and type the following command. git init  
+</p>
+<div>
+    <figure>
+        <img src="./repository iniitialization.jpg" alt="git repo">
+        <figcaption>innitializing a git repository command</figcaption>
+    </figure>
+
+</div>
+<p>
+    To verify if your git repository has been initialized, type the following command. git status
+</p>
+<h2>Adding Files to the Staging Area</h2>
+<p>
+    Before adding changes to a Git repository, you need to add them to the staging area. The staging area is a space where you can organize and review changes before committing them to the repository. Think of this as a holding area where you can decide which changes to include in your next commit.
+</p>
+<p>
+    Here is how to add files into the staging area.   
+</p>
+<p>
+    Open Command Prompt and type in the following command git add “Filename” to add a specific file. 
+</p>
+<p>
+    To add all changes in the current directory to the staging area, type the following command
+git add .
+
+</p>
+<h3>Tracked vs Untracked Files</h3>
+<p>
+    Tracked files are files that Git is already aware of and are being tracked for changes. Once a file is added to the staging area and committed, it becomes a tracked file. 
+</p>
+<p>
+    Untracked files are those that Git is not currently tracking, they are new files that have not been added to the staging area or committed to the repository. 
+</p>
+<p>
+    To check the status of your files, use the following command git status 
+</p>
+<h2>Committing Changes to a Git Repository</h2>
+<p>
+    Once you've added your changes to the staging area, the next step is to commit them to the repository. Committing is crucial as it saves a snapshot of your project, enabling you to track and manage its history.  
+</p>
+<p>
+    To commit files to a Git repository, open Command Prompt and type the following command git commit --m  “Your Commit Message”   
+</p>
+<p>
+    The –m flag allow you to include a commit message, which describes the changes you’ve made.   
+</p>
+<p>
+    Writing a good commit message is essential for understanding the changes made to a project. Here are some tips on writing effective commit messages:
+</p>
+<div>
+    <ul>
+        <li>Write your message as a command ie Fix bug instead of Fixed bug</li>
+        <li>Explain the why not just the what to provide more context</li>
+        <li>Be concise yet descriptive</li>
+    </ul>
+</div>
+<p>
+    To view the history of commits in your repository, use the following command git log
+</p>
+<p>
+    This command displays a list of past commits including their unique hash number, author, date, and the commit message.  
+</p>
+<p>
+    If you want to go back to a particular commit, use the git log to find the hash of the commit you want to revert to, then use the command git checkout <commit-hash> to view the particular working directory of the project at that particular commit.  
+</p>
+<h2>Branches in Git</h2>
+<p>
+    A branch in Git is a separate line of development which allows developers to manage different versions of their codebase concurrently. When you create a new branch, you are creating a copy of your codebase at that particular point in time and you can make changes to this branch without affecting the main branch. The default branch in Git is called main or master.  
+</p>
+<h3>Importance of Branches</h3>
+<p>
+    Isolation of work to allow you to work on new features of fix bugs in isolation. This means changes made to this branch does not affect the main branch.
+</p>
+<p>
+    For collaboration: multiple developers can work on different branches simultaneously, enabling efficient collaboration. 
+</p>
+<p>
+    Experimentation: branches provide a way to experiment with new ideas or prototypes without disrupting the main codebase. If the experiment is successful, it can be merged with the main codebase. 
+</p>
+<p>
+    Version control: branches make it easier to manage different version of your project. E.g. You can have a branch for a stable release and another for next version under development.
+</p>
+<h2>Creating a Branch in Git</h2>
+<p>
+    Creating branches in Git is a straightforward process. Here is how you can create a branch in Git. 
+</p>
+<p>
+    Open Command prompt and navigate to your git repository and type in the following command git branch “branch name”
+</p>
+<p>
+    Replace branch-name with the desired name for your branch.    
+</p>
+<h2>Viewing all Branches</h2>
+<p>
+    Once you have created a branch, you can view the branch by typing the following command (git branch), this command will display a list of all branches in the repository and the current branch will be highlighted with an asterisk (*) next to it.
+</p>
+<h2>Switching Branches</h2>
+<p>
+    You can switch to different branches in your Git repository by using the following command (git switch) “branch-name”. You can verify if you have successfully switched to the desired branch by typing the following command git branch note that the current branch will be highlighted with an asterisk (*)
+
+</p>
+<h2>Merging Branches in Git</h2>
+<p>
+    Merging allows you to integrate changes from one branch into another. When merging branches in Git, you have to switch to the branch you want to merge changes into (usually the master/main branch)
+</p>
+<p>
+    Use the following command to merge different branches, git merge (branch-name)
+</p>
+<h2>Deleting a Branch in Git</h2>
+<p>
+    Sometimes, after merging changes or deciding that a particular branch is no longer needed, you might want to delete a branch. Here is how you delete a branch.
+</p>
+<p>
+    First, switch to the branch you want to delete, then type git branch --d “branch-name”
+</p>
+<h2>Next Steps for Mastering Git and GitHub</h2>
+<p>
+    For your next steps, delve into remote repositories to push and pull changes, explore GitHub for collaboration by creating and managing repositories, and understand issues and pull requests. Expand your Git skills with advanced commands like rebasing, cherry-picking, and stashing. Automate your workflow with Git hooks, and integrate Continuous Integration/Continuous Deployment (CI/CD) tools like GitHub Actions to streamline your development process. By exploring these areas, you'll enhance your development workflow and collaboration skills significantly.  
+</p>
+</body>
+</html>
