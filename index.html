@@ -96,6 +96,10 @@
 <p>
     Here is how to add files into the staging area.   
 </p>
+<div>
+    <figure><img src="./staging area.jpg" alt="adding to the stging area"></figure>
+    <figcaption>adding files to the staging area command</figcaption>
+</div>
 <p>
     Open Command Prompt and type in the following command git add “Filename” to add a specific file. 
 </p>
@@ -121,6 +125,10 @@ git add .
 <p>
     To commit files to a Git repository, open Command Prompt and type the following command git commit --m  “Your Commit Message”   
 </p>
+<div>
+    <figure><img src="./commit.jpg" alt="commit command"></figure>
+    <figcaption>commiting files command</figcaption>
+</div>
 <p>
     The –m flag allow you to include a commit message, which describes the changes you’ve made.   
 </p>
@@ -137,12 +145,20 @@ git add .
 <p>
     To view the history of commits in your repository, use the following command git log
 </p>
+<div>
+    <figure><img src="./view past commit.jpg" alt="commit log"></figure>
+    <figcaption>viewing past commits</figcaption>
+</div>
 <p>
     This command displays a list of past commits including their unique hash number, author, date, and the commit message.  
 </p>
 <p>
     If you want to go back to a particular commit, use the git log to find the hash of the commit you want to revert to, then use the command git checkout <commit-hash> to view the particular working directory of the project at that particular commit.  
 </p>
+<div>
+    <figure><img src="./check past commit.jpg" alt="past commits"></figure>
+    <figcaption>checking a past commit command</figcaption>
+</div>
 <h2>Branches in Git</h2>
 <p>
     A branch in Git is a separate line of development which allows developers to manage different versions of their codebase concurrently. When you create a new branch, you are creating a copy of your codebase at that particular point in time and you can make changes to this branch without affecting the main branch. The default branch in Git is called main or master.  
@@ -174,11 +190,19 @@ git add .
 <p>
     Once you have created a branch, you can view the branch by typing the following command (git branch), this command will display a list of all branches in the repository and the current branch will be highlighted with an asterisk (*) next to it.
 </p>
+<div>
+    <figure><img src="./branch check.jpg" alt="branch"></figure>
+    <figcaption>check branch command</figcaption>
+</div>
 <h2>Switching Branches</h2>
 <p>
     You can switch to different branches in your Git repository by using the following command (git switch) “branch-name”. You can verify if you have successfully switched to the desired branch by typing the following command git branch note that the current branch will be highlighted with an asterisk (*)
 
 </p>
+<div>
+    <figure><img src="./branch switch.jpg" alt="branch switch"></figure>
+    <figcaption>switching a branch command</figcaption>
+</div>
 <h2>Merging Branches in Git</h2>
 <p>
     Merging allows you to integrate changes from one branch into another. When merging branches in Git, you have to switch to the branch you want to merge changes into (usually the master/main branch)
@@ -186,6 +210,10 @@ git add .
 <p>
     Use the following command to merge different branches, git merge (branch-name)
 </p>
+<div>
+    <figure><img src="./merge branch.jpg" alt="merge"></figure>
+    <figcaption>branch merging command</figcaption>
+</div>
 <h2>Deleting a Branch in Git</h2>
 <p>
     Sometimes, after merging changes or deciding that a particular branch is no longer needed, you might want to delete a branch. Here is how you delete a branch.
@@ -193,6 +221,10 @@ git add .
 <p>
     First, switch to the branch you want to delete, then type git branch --d “branch-name”
 </p>
+<div>
+    <figure><img src="./branch delete.jpg" alt="delete branch"></figure>
+    <figcaption>branch delete command</figcaption>
+</div>
 <h2>Next Steps for Mastering Git and GitHub</h2>
 <p>
     For your next steps, delve into remote repositories to push and pull changes, explore GitHub for collaboration by creating and managing repositories, and understand issues and pull requests. Expand your Git skills with advanced commands like rebasing, cherry-picking, and stashing. Automate your workflow with Git hooks, and integrate Continuous Integration/Continuous Deployment (CI/CD) tools like GitHub Actions to streamline your development process. By exploring these areas, you'll enhance your development workflow and collaboration skills significantly.  
